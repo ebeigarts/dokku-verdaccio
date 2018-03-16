@@ -2,9 +2,9 @@ FROM verdaccio/verdaccio:2
 
 USER root
 RUN  apk add --update apache2-utils
-WORKDIR /verdaccio
-COPY . /verdaccio
+WORKDIR /app
+COPY . /app
 
 USER verdaccio
 ENTRYPOINT [""]
-CMD ["/verdaccio/run"]
+CMD ["/app/run"]
