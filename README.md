@@ -7,7 +7,7 @@ Private npm registry server deployed as a dokku app.
 ```bash
 dokku apps:create my-registry
 dokku storage:mount my-registry /var/lib/dokku/data/storage/my-registry:/verdaccio/storage
-dokku config:set my-registry PORT=5000 PROTOCOL=http
+dokku config:set my-registry AUTH_USER=user AUTH_PASSWORD=$(openssl rand -hex 16)
 dokku ps:set-restart-policy my-registry unless-stopped
 dokku domains:add my-registry my-registry.example.com
 dokku letsencrypt my-registry
