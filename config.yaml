@@ -49,4 +49,4 @@ packages:
 
 # log settings
 logs:
-  - {type: stdout, format: pretty, level: info}
+  - {type: stdout, format: pretty, level: debug}
