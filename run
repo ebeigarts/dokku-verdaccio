@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "-----> Generating httpasswd $AUTH_USER"
-htpasswd -Bbn "$AUTH_USER" "$AUTH_PASSWORD" > /app/htpasswd
+htpasswd -Bbn "$AUTH_USER" "$AUTH_PASSWORD" > /verdaccio/htpasswd
 
 echo "-----> Starting verdaccio"
-$APPDIR/bin/verdaccio --config /app/config.yaml --listen http://0.0.0.0:5000
+$APPDIR/bin/verdaccio --config /verdaccio/config.yaml --listen http://0.0.0.0:5000

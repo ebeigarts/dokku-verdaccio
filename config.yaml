@@ -15,7 +15,7 @@ storage: /verdaccio/storage
 
 auth:
   htpasswd:
-    file: /app/htpasswd
+    file: /verdaccio/htpasswd
     # Maximum amount of users allowed to register, defaults to "+infinity".
     # You can set this to -1 to disable registration.
     max_users: -1
