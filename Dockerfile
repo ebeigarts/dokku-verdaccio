@@ -1,4 +1,4 @@
 FROM verdaccio/verdaccio:2
 
-ENV PORT 5000
-ENV PROTOCOL http
+COPY config.yaml /verdaccio/conf/config.yaml
+COPY CHECKS /usr/local/app
