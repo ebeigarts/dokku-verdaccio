@@ -1,4 +1,4 @@
-FROM verdaccio/verdaccio:2
+FROM verdaccio/verdaccio:latest
 
 USER root
 RUN  apk add --update apache2-utils
